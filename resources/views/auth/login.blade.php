@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>NoteSaver - Log in</title>
     <link rel="stylesheet" href="{{ url('css/welcome.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,7 @@
                         Log in
                     </button>
 
-                    <a href="#" class="btn btn-register" type="submit">
+                    <a href="{{ route('register') }}" class="btn btn-register" type="submit">
                         Register
                     </a>
                 </div>
