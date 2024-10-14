@@ -25,20 +25,26 @@
         </div>
 
         <div class="rightSide">
-            <form action="" class="formWrapper">
+            <form action="{{ route('login') }}" novalidate method="post" class="formWrapper">
                 @csrf
                 <div>
                     <h2 class="loginTitle">Login</h2>
                 </div>
                 
                 <div class="inputItem">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
+                    <label for="username">Email</label>
+                    <input type="email" id="username" name="username">
+                    @error('username')
+                        <p class="errorMessage">{{ $message }}</p>
+                    @enderror   
                 </div>
 
                 <div class="inputItem">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password">
+                    @error('password')
+                        <p class="errorMessage">{{ $message }}</p>
+                    @enderror   
                 </div>
 
                 <div class="btnWrapper">
