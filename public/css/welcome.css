@@ -1,0 +1,101 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(225, 225, 225);
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.loginTitle {
+    text-align: center;
+    color: darkslategrey;
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    border: 2px solid brown;
+    border-radius: 24px;
+}
+
+.inputItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputItem > label {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.inputItem > input {
+    outline: none;
+    border: 1px solid darkslategrey;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.btnWrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;    
+}
+
+.btn {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: darkblue;
+}
+
+.btn-login {
+    background-color: darkblue;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+}
+
+.btn-register {
+    padding: 4px 12px;
+    color: white;
+    text-decoration: none;
+    background-color: coral;
+    border-radius: 12px;
+}
+
+/* Left Side */
+
+.leftSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+}
+
+.title {
+    font-size: 42px;
+    font-family: "Lilita One", sans-serif;
+    color: midnightblue;
+    font-weight: bold;
+    text-align: center;
+}
