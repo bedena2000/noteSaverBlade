@@ -20,7 +20,7 @@ class NoteFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(),
+            'user_id' => 1,
             'title' => $this->faker->sentence,
             'content'=> $this->faker->paragraph,
             'isFavorite' => $this->faker->boolean(20),

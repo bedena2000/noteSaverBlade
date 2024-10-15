@@ -109,6 +109,52 @@ body {
 /* Note */
 
 .notesContainer {
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    overflow: scroll;
 }
 
+.noteItem {
+    width: 310px;
+    padding: 20px;
+    background-color: #181818;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.noteItem:hover {
+    background-color: #303030;
+}
+
+.noteItem__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 18px;
+}
+
+.noteItem-information__content {
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.noteItem-information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.noteItem-information__createdAt {
+    opacity: 40%;
+}
+
+.noteItem-information__content {
+    opacity: 60%;
+}

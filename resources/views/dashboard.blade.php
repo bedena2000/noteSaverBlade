@@ -60,9 +60,14 @@
         
         <div class="dashboardRightSide">
             <h2 class="userName">{{ Auth::user()->name }}'s notes</h2>
-
             <div class="notesContainer">
-
+                @foreach ($notes as $note)
+                    <x-note 
+                        :title="$note->title"
+                        :createdAt="$note->created_at->format('d/m/Y')"
+                        :content="$note->content"
+                    />
+                @endforeach
             </div>
         </div>
 

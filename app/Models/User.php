@@ -47,6 +47,6 @@ class User extends Authenticatable
     }
 
     public function notes() {
-        return $this->hasManu(Note::class);
+        return $this->hasMany(Note::class);
     }
 }
