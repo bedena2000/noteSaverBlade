@@ -18,3 +18,9 @@ Route::middleware('guest')->group(function () {
     Route::get("/register", [RegisterController::class, 'show'])->name('register');
     Route::post("/register", [RegisterController::class, 'create']);
 });
+
+
+// Redirect on Error
+Route::fallback(function () {
+    return redirect()->route('dashboard');
+});
