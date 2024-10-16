@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Note;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,11 @@ Route::middleware('guest')->group(function () {
     Route::get("/register", [RegisterController::class, 'show'])->name('register');
     Route::post("/register", [RegisterController::class, 'create']);
 });
+
+// Note
+Route::get('/notes/{id}', [NoteController::class, 'show']);
+Route::put('/notes/{note}', [NoteController::class, 'update'])->name('note.update');
+
 
 // Logout
 Route::post('/logout', function() {
