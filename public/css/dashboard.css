@@ -14,6 +14,7 @@ body {
     height: 100vh;
     grid-template-columns: 2fr 6fr;
     font-family: "Source Code Pro", monospace;
+    overflow: hidden;
 }
 
 .dashboardLeftSide {
@@ -109,11 +110,34 @@ body {
 /* Note */
 
 .notesContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    height: 100vh;
     overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #F1F1F1;
+}
+
+.notesContainer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+.notesContainer::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.notesContainer::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.notesContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #45a049; 
 }
 
 .noteItem {
@@ -158,3 +182,5 @@ body {
 .noteItem-information__content {
     opacity: 60%;
 }
+
+/* Pagination */

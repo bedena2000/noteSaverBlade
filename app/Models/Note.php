@@ -21,4 +21,18 @@ class Note extends Model
     public function user() {
         return $this->belongsTo(User::class);    
     }
+
+    public function scopeFavorites($query) {
+        return $query->where('isFavorite', true);
+    }
+
+    public function scopeInTrash($query)
+    {
+        return $query->where('isTrash', true);
+    }
+
+    public function scopeArchived($query)
+    {
+        return $query->where('isArchived', true);
+    }
 }
